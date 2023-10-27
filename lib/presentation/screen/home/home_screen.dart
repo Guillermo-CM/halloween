@@ -18,15 +18,31 @@ class HomeScreen extends StatelessWidget {
   class _HomeView extends StatelessWidget {
     const _HomeView({super.key});
 
-    @override
+  @override
   Widget build(BuildContext context) {
     return ListView.builder(
       itemCount: appMenuItems.length,
-      itemBuilder: (context, index) =>Text(appMenuItems[index].title));
-    
+      itemBuilder: (context, index) => CustomTile(
+        menuItem: appMenuItems[index],
+      ));
   }
-
-
-
 }
 
+
+class CustomTile extends StatelessWidget {
+  const CustomTile({super.key, required this.menuItem});
+  final MenuItem menuItem;
+
+  @override
+  Widget build(BuildContext context) {
+    return Card(
+      child: ListTile(
+        leading: Icon(menuItem.icon),
+        title: Text(menuItem.title),
+        subtitle: Text(menuItem.subTitle),
+        trailing: const Icon(Icons.navigate_next),
+        onTap: () {},
+      ),
+    );
+  }
+}
