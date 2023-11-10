@@ -173,7 +173,7 @@ class _CardType5 extends StatelessWidget {
       elevation: elevation,
       child: Stack(
         children: [
-          Image.network('http://placekitten.com/g/20${elevation.toInt()}/300',
+          Image.network('https://picsum.photos/id/${elevation.toInt()}/600/250',
               height: 350, fit: BoxFit.cover),
           Align(
               alignment: Alignment.topRight,
