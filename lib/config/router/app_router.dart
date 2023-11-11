@@ -1,33 +1,9 @@
-import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
-import 'package:halloween/presentation/screen/screens.dart';
-import 'package:halloween/screens/progress/progress_screen.dart';
+import 'package:halloween/config/router/list_router.dart';
 
 
 final GoRouter appRouter = GoRouter(
-  routes: <RouteBase>[
-    GoRoute(
-      path: '/',
-      name:HomeScreen.screenName,
-      builder: (BuildContext context, GoRouterState state) => const HomeScreen(),
-    ),
-    GoRoute(
-      path: '/buttons',
-      name:ButtonsScreen.screenName,
-      builder: (BuildContext context, GoRouterState state) =>
-          const ButtonsScreen(),
-    ),
-    GoRoute(
-      path: '/cards',
-      name: CardsScreen.screenName,
-      builder: (BuildContext context, GoRouterState state) =>
-          const CardsScreen(),
-    ),
-    GoRoute(
-      path: '/progress',
-      name: ProgressScreen.screenName,
-      builder: (BuildContext context, GoRouterState state) =>
-          const ProgressScreen(),
-    ),
-  ],
+  routes: routes,
+   debugLogDiagnostics: true,
 );
+
