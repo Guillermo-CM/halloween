@@ -1,12 +1,15 @@
-
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 import 'package:halloween/screens/animated/animated_screen.dart';
 import 'package:halloween/screens/app_tutorial/app_tutorial_screen.dart';
+import 'package:halloween/screens/buttons/buttons_screen.dart';
+import 'package:halloween/screens/cards/cards_screen.dart';
+import 'package:halloween/screens/counter/counter_screen.dart';
+import 'package:halloween/screens/home/home_screen.dart';
 import 'package:halloween/screens/infinite_scroll/infinite_scroll_screen.dart';
 import 'package:halloween/screens/progress/progress_screen.dart';
-import 'package:halloween/screens/screens.dart';
 import 'package:halloween/screens/snackbar/snackbar_screen.dart';
+import 'package:halloween/screens/theme_changer/theme_changer_screen.dart';
 import 'package:halloween/screens/ui_controls/ui_controls_screen.dart';
 
 
@@ -56,5 +59,15 @@ final List<RouteBase> routes = [
     path: '/infinite',
     name: InfiniteScrollScreen.screenName,
     builder: (context, state) => const InfiniteScrollScreen(),
+  ),
+    GoRoute(
+    path: '/counter-river',
+    name: CounterScreen.name,
+    builder: (context, state) => const CounterScreen(),
+  ),
+  GoRoute(
+    path: '/theme-changer',
+    name: ThemeChangerScreen.name,
+    builder: (context, state) => const ThemeChangerScreen(),
   ),
 ];
